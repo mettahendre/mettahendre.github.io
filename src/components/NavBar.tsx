@@ -17,7 +17,7 @@ export default function NavBar() {
   return (
     <nav className={`navbar ${styles.nav}`}>
       <Link href="/" className="navbar-brand serif" onClick={() => setOpen(false)}>
-        Metta Hendre
+        Metta
       </Link>
 
       {/* Hamburger button — visible only on mobile */}

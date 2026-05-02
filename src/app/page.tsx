@@ -39,7 +39,7 @@ export default function Home() {
 
           <div className={`${styles.heroText} fade-up delay-2`}>
             <p className={styles.greeting}>Hello, I&apos;m</p>
-            <h1 className={`${styles.name} serif`}>Metta Hendre</h1>
+            <h1 className={`${styles.name} serif`}>Metta</h1>
             <p className={styles.headline}>
               Data Engineer at TelefonicaTech &nbsp;·&nbsp; Databricks Certified &nbsp;·&nbsp; Azure Specialist
             </p>
@@ -127,7 +127,7 @@ export default function Home() {
       {/* ── Footer ── */}
       <footer className={styles.footer}>
         <p className={styles.footerText}>
-          &copy; {new Date().getFullYear()} Metta Hendre &mdash; Crafted with ♥
+          &copy; {new Date().getFullYear()} Metta &mdash; Crafted with ♥
         </p>
         <div className={styles.footerLinks}>
           <a href="https://www.linkedin.com/in/metta-h-87a127218/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
