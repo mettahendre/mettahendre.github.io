@@ -3,8 +3,11 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 
 export const metadata: Metadata = {
-  title: "Metta Hendre | Data Engineer",
-  description: "Portfolio of Metta Hendre — Databricks Certified Data Engineer specializing in Azure, ADF, ADB, PySpark, and Synapse Analytics.",
+  title: "Metta | Data Engineer",
+  description: "Portfolio of Metta — Databricks Certified Data Engineer specializing in Azure, ADF, ADB, PySpark, and Synapse Analytics.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export const viewport: Viewport = {
