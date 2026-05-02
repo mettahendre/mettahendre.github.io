@@ -1,0 +1,97 @@
+.nav {
+  position: relative; /* needed for drawer positioning */
+}
+
+/* ── Hamburger button ── */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  z-index: 110;
+}
+
+.burger:hover { background: rgba(244, 143, 177, 0.12); }
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--p-deep-rose);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.bar1Open { transform: translateY(7px) rotate(45deg); }
+.bar2Open { opacity: 0; transform: scaleX(0); }
+.bar3Open { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Desktop links (hide on mobile) ── */
+.desktopLinks { display: flex; }
+
+/* ── Mobile drawer ── */
+.drawer {
+  display: none;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0; right: 0;
+  background: rgba(255, 240, 246, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--p-border);
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+  box-shadow: 0 8px 24px rgba(194, 24, 91, 0.08);
+}
+
+.drawerOpen {
+  max-height: 300px;
+  padding: 1rem 0;
+}
+
+.drawerLink {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--p-muted);
+  transition: background 0.2s, color 0.2s;
+}
+
+.drawerLink:hover {
+  background: rgba(244, 143, 177, 0.08);
+  color: var(--p-deep-rose);
+}
+
+.drawerActive {
+  color: var(--p-deep-rose);
+  font-weight: 700;
+  border-left: 3px solid var(--p-rose);
+  padding-left: calc(2rem - 3px);
+}
+
+/* Backdrop to close menu on tap outside */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+
+/* ── Mobile breakpoint ── */
+@media (max-width: 640px) {
+  .burger        { display: flex; }
+  .desktopLinks  { display: none !important; }
+  .drawer        { display: flex; z-index: 100; }
+}
